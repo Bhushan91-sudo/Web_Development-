@@ -3,6 +3,7 @@
     "development"
   ],
   "hints": {
+<<<<<<< HEAD
     "axe/name-role-value": [
       "default",
       {
@@ -16,5 +17,8 @@
         "aria-progressbar-name": "off"
       }
     ]
+=======
+    "disown-opener": "off"
+>>>>>>> f968a1ca8f27432c5fc97e5d6e64649652207471
   }
 }
