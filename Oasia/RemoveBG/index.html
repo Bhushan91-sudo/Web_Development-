@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RemoveBG</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Remove image background <span> automatically </span> & <span>free</span>
+      </h1>
+      <!-- Add Card -->
+      <div class="card" id="addCard">
+        <button>
+          <input type="file" name="" id="fileInput" />
+          Upload Image
+        </button>
+        <p>Choose an image to makes it transparent</p>
+      </div>
+      <!-- Display Card -->
+      <div class="card" id="displayCard">
+        <div class="image-cont">
+          <img
+            id="display-img"
+            src=""
+            alt=""
+          />
+        </div>
+        <button id="startBtn">Start</button>
+      </div>
+      <!-- Loading Card -->
+      <div class="card" id="loadingCard">
+        <div class="loader"></div>
+      </div>
+      <!-- Download Card -->
+      <div class="card" id="downloadCard">
+        <div class="image-cont">
+          <img
+            class="image-before"
+            src="https://i.ibb.co/FxwzdMH/andraw-Tate.png"
+            alt=""
+          />
+          <img
+            class="image-after"
+            src="https://i.ibb.co/TvQbyj8/andraw-Tate-afterpng.png"
+            alt=""
+          />
+        </div>
+        <div style="display: flex; gap: 10px">
+          <button id="uploadAnother">Upload Another</button>
+          <button style="padding: 10px 40px">
+            <a id="downloadHref" download="transparentImage"> Download </a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+/* RESET */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=El+Messiri:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+body {
+  background-color: #222;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 550px;
+}
+.container h1 {
+  color: #eee;
+  text-align: center;
+  text-transform: capitalize;
+}
+.container h1 span:first-child {
+  color: #ffa74a;
+}
+.container h1 span:last-child {
+  color: #42a3ff;
+}
+
+/* CARD */
+.container .card {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 3px solid #555;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 10px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#addCard {
+  border-style: dashed;
+}
+.container .card button {
+  border: none;
+  outline: none;
+  position: relative;
+  background-color: #42a3ff;
+  padding: 10px 60px;
+  border-radius: 5px;
+  font-size: 15px;
+  color: white;
+  transition: 0.3s;
+  box-shadow: 0px 5px 0px 0px #216aae;
+  cursor: pointer;
+}
+.container .card button:active {
+  box-shadow: 0px 0px 0px 0px #216aae;
+  transform: translateY(5px);
+}
+.container button#uploadAnother {
+  background-color: brown;
+  padding: 10px 30px;
+  box-shadow: 0px 5px 0px 0px rgb(102, 19, 19);
+}
+.container button#uploadAnother:active {
+  box-shadow: 0px 0px 0px 0px rgb(102, 19, 19);
+  transform: translateY(5px);
+}
+.container .card button input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  cursor: pointer;
+}
+.container .card p {
+  color: white;
+  font-size: 14px;
+  opacity: 0.7;
+  text-align: center;
+  margin-top: 20px;
+}
+.container #displayCard img {
+  max-height: 100%;
+  width: auto;
+  border-radius: 5px;
+  z-index: 1;
+}
+.container .image-cont {
+  border-radius: 5px;
+  padding: 10px;
+  max-height: 90%;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container #downloadCard .image-cont {
+  padding: 0px;
+  width: fit-content;
+  background-image: url("https://thumbs.dreamstime.com/b/transparent-designer-must-have-fake-background-39672616.jpg");
+  background-size: contain;
+}
+.container #downloadCard .image-after {
+  max-height: 100%;
+  width: auto;
+  border-radius: 5px;
+  z-index: 1;
+}
+.container #downloadCard .image-before {
+  max-width: 20%;
+  height: auto;
+  border-radius: 5px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+/* LOADER */
+.loader {
+  --ballcolor: #f2f2f2;
+  --shadow: 0px 0 #ffffff00;
+  --shadowcolor: #ffffff00;
+  width: 10px;
+  height: 10px;
+  left: -120px;
+  border-radius: 50%;
+  position: relative;
+  color: var(--ballcolor);
+  animation: shadowRolling 2s linear infinite;
+}
+
+@keyframes shadowRolling {
+  0% {
+    box-shadow: var(--shadow), var(--shadow), var(--shadow), var(--shadow);
+  }
+
+  12% {
+    box-shadow: 100px 0 var(--ballcolor), var(--shadow), var(--shadow),
+      var(--shadow);
+  }
+
+  25% {
+    box-shadow: 110px 0 var(--ballcolor), 100px 0 var(--ballcolor),
+      var(--shadow), var(--shadow);
+  }
+
+  36% {
+    box-shadow: 120px 0 var(--ballcolor), 110px 0 var(--ballcolor),
+      100px 0 var(--ballcolor), var(--shadow);
+  }
+
+  50% {
+    box-shadow: 130px 0 var(--ballcolor), 120px 0 var(--ballcolor),
+      110px 0 var(--ballcolor), 100px 0 var(--ballcolor);
+  }
+
+  62% {
+    box-shadow: 200px 0 var(--shadowcolor), 130px 0 var(--ballcolor),
+      120px 0 var(--ballcolor), 110px 0 var(--ballcolor);
+  }
+
+  75% {
+    box-shadow: 200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor),
+      130px 0 var(--ballcolor), 120px 0 var(--ballcolor);
+  }
+
+  87% {
+    box-shadow: 200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor),
+      200px 0 var(--shadowcolor), 130px 0 var(--ballcolor);
+  }
+
+  100% {
+    box-shadow: 200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor),
+      200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor);
+  }
+}
+
+/* Code for JS */
+
+#addCard,
+#displayCard,
+#loadingCard,
+#downloadCard {
+  display: none;
+}
